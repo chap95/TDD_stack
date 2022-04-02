@@ -29,7 +29,7 @@ describe("test stack", () => {
 
     expect(() => {
       stack.push(11)
-    }).toThrow("stack overflow")
+    }).toThrow("stack overflow");
   })
    
 });
