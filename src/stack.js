@@ -6,6 +6,9 @@ class Stack {
   }
 
   push(value) {
+    if(this.data.length + 1 > this.maxLength) {
+      throw("stack overflow");
+    }
     this.data.push(value);
     this.pointer += 1;
   }
@@ -13,6 +16,10 @@ class Stack {
   pop() {
     this.pointer -= 1;
     return this.data.pop();
+  }
+
+  clear() {
+    this.data = [];
   }
 }
 
