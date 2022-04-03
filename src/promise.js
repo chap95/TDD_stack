@@ -1,7 +1,17 @@
-function getPromise() {
-  const result  = new Promise({
-    key: 'promiseKey',
-    value: true,
+function getPromise(type) {
+  const result  = new Promise((resolve, reject) => {
+    if(type === 'success'){
+    resolve({
+      key: 'promiseKey',
+      value: true,
+    })}
+
+
+    if(type === 'error') {
+    reject(
+      'error'
+    )
+    }
   })
 
 
